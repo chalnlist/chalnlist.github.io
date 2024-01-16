@@ -1,0 +1,132 @@
+{
+  "settings": {
+    "name": "Site 2023-12-15 20:58",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.8",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/chainlist-logo.jpg",
+    "imageResize": false,
+    "usedWebp": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 1,
+    "versionPublish": "5.9.8"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Chainlist™ | Official Site",
+        "meta_descr": "Chainlist is a curated directory of blockchain APIs and data providers. It simplifies the process of accessing reliable and up-to-date blockchain resources, offering developers and users a centralized hub to find and integrate APIs into their applications.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpgg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/chainlist.jpg\" alt=\"Chainlist\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b>Chainlist™ | Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What Is Chainlist?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://chainlst.github.io\" class=\"text-primary\">Chainlist </a>is a platform that provides a curated list of blockchain APIs and data providers. It serves as a directory for developers and users seeking reliable and accessible blockchain data and infrastructure. <a href=\"https://chainlist.org/\" class=\"text-primary\">Chainlist </a>aims to simplify the process of integrating blockchain technologies into applications by offering a comprehensive collection of APIs, documentation, and resources from various blockchain networks.\n<br>\n<br><b>Overview of Chainlist:\n<br></b>\n<br>Chainlist acts as a centralized hub that connects developers and users with a wide range of blockchain APIs and data providers. It offers a curated list of resources for different blockchain networks, including Ethereum, Binance Smart Chain, Solana, Polkadot, and more. By aggregating these resources, Chainlist streamlines the development process and reduces the effort required to access blockchain data and infrastructure.\n<br>\n<br><b>Key Features of Chainlist:\n<br></b>\n<br>API Directory: Chainlist provides an extensive directory of blockchain APIs from various networks. These APIs enable developers to interact with blockchain networks programmatically, retrieve data, and perform various operations. The directory includes APIs for accessing blockchain data, smart contract interaction, transaction monitoring, and more.\n<br>\n<br>Data Providers: Chainlist includes a list of reliable and trusted data providers that offer real-time and historical blockchain data. These data providers collect and aggregate blockchain data, making it accessible for developers and users to build applications that require accurate and up-to-date information.\n<br>\n<br>Documentation: Chainlist offers documentation for each listed API and data provider. This documentation provides detailed information about API endpoints, parameters, authentication methods, and usage examples. It helps developers understand how to integrate and utilize the APIs effectively.\n<br>\n<br>Filtering and Sorting: Chainlist allows users to filter and sort the listed APIs and data providers based on various criteria. Users can narrow down their search based on the blockchain network, data type, functionality, or specific requirements. This feature helps users find the most relevant resources quickly.\n<br>\n<br>Ratings and Reviews: Chainlist incorporates a rating and review system for APIs and data providers. Users can provide feedback and share their experiences, helping others assess the quality and reliability of the resources. This peer-driven feedback system assists developers in making informed decisions when selecting APIs or data providers.\n<br>\n<br>Community Contributions: Chainlist encourages community contributions to ensure the directory remains comprehensive and up to date. Users can suggest new APIs or data providers to be added to the list, report issues, or provide feedback to enhance the platform's accuracy and usefulness.\n<br>\n<br><b>Benefits of Chainlist:\n<br></b>\n<br>Saves Time and Effort: Chainlist simplifies the process of finding and accessing blockchain APIs and data providers. By centralizing a curated list of resources, it saves developers the time and effort required to search for and evaluate different options individually.\n<br>\n<br>Reliability and Trust: Chainlist focuses on listing reliable and trustworthy APIs and data providers. The curated nature of the platform ensures that users can access high-quality resources without having to worry about the credibility or integrity of the listed options.\n<br>\n<br>Community Feedback and Ratings: The rating and review system on Chainlist provides valuable insights from the community. Users can benefit from the experiences and feedback shared by others, allowing them to make informed decisions when selecting APIs or data providers.\n<br>\n<br>Consolidated Documentation: Chainlist offers documentation for each listed API and data provider, making it easier for developers to understand and integrate the resources into their applications. The consolidated documentation saves time by providing a single point of reference for multiple APIs.\n<br>\n<br>Wide Range of Blockchain Networks: Chainlist supports multiple blockchain networks, allowing developers to access APIs and data providers for various ecosystems. This flexibility helps developers work with different blockchain networks based on their specific requirements.\n<br>\n<br><b>Considerations:\n<br></b>\n<br>While Chainlist provides a valuable resource for developers and users seeking blockchain APIs and data providers, there are a few considerations to keep in mind:\n<br>\n<br>Dynamic Nature of the Ecosystem: The blockchain ecosystem is continuously evolving, with new APIs and data providers emerging regularly. It's important to acknowledge that Chainlist might not always have the most up-to-date resources. Users should verify the information and conduct additional research before finalizing their choices.\n<br>\n<br>Third-Party Reliance: Chainlist relies on third-party APIs and data providers listed on the platform. Users should independently evaluate the reliability, security, and terms of service of the resources they choose to integrate into their applications.\n<br>\n<br>Limited Scope: While Chainlist covers a wide range of blockchain networks, it may not include every available API or data provider. Developers should explore additional resources beyond Chainlist if they require specialized or niche blockchain solutions.\n<br>\n<br><b>Conclusion:\n<br></b>\n<br>Chainlist serves as a centralized directory for blockchain APIs and data providers, providing developers and users with a curated list of resources from various blockchain networks. By aggregating these resources, Chainlist simplifies the process of integrating blockchain technologies into applications. Its features, such as the API directory, data provider listings, documentation, and community feedback, contribute to a more efficient and reliable development experience. Developers and users can leverage Chainlist to access high-quality blockchain APIs and data providers, savingtime and effort while building applications and accessing accurate blockchain data. However, users should stay updated with the evolving blockchain ecosystem and independently assess the reliability and suitability of the listed resources. Chainlist offers a valuable platform for developers and users to navigate the blockchain landscape and discover the APIs and data providers that best align with their needs.</p>\n              </div>\n            </div>\n            \n            \n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "tYwrmc38PI",
+          "_anchor": "article08-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
